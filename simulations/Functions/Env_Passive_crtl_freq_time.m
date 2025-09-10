@@ -127,7 +127,7 @@ classdef Env_Passive_crtl_freq_time < rl.env.MATLABEnvironment
             
             
             %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-            IsDone = this.time(this.index_time) > this.Tf || rms(this.q) > this.Threshold;
+            IsDone = this.time(this.index_time) >= this.Tf || rms(this.q) > this.Threshold;
             this.IsDone = IsDone;
 
             this.index_time=this.index_time+this.index_time;
